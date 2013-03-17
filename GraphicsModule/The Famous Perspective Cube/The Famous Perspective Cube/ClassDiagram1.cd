@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="The_Famous_Perspective_Cube.Form1">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Form1.cs</FileName>
+      <HashCode>ACCAACEEAChCEBAAAACACEALABAEgAgAAAQAAAAAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Famous_Perspective_Cube.Nmatrix">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nmatrix.cs</FileName>
+      <HashCode>AAAAAAAIAQAAAAACAEAAACAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Famous_Perspective_Cube.Npoint">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Npoint.cs</FileName>
+      <HashCode>AAAAAACAAAAABAAAAAAABAAAAAAEAAAAAAAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="The_Famous_Perspective_Cube.Nquad">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nquad.cs</FileName>
+      <HashCode>AAAAAACAAAAAAEAAAAIAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

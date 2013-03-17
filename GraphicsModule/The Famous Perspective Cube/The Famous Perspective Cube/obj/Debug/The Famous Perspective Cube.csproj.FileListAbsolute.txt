@@ -1,0 +1,39 @@
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.exe
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.pdb
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.pdb
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\ResolveAssemblyReference.cache
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Form1.resources
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Properties.Resources.resources
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\ResGen.read.1.tlog
+C:\Nigel\F\Nigel\Coarse Stuff\COM312\PROGRAMS\C#\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\ResGen.write.1.tlog
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.exe
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.pdb
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.pdb
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.csprojResolveAssemblyReference.cache
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Form1.resources
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Properties.Resources.resources
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.csproj.GenerateResource.Cache
+C:\Users\dan\Downloads\The Famous Perspective Cube\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe.config
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe.config
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.exe
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.pdb
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.pdb
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Form1.resources
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Properties.Resources.resources
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\ResGen.read.1.tlog
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\dtpalmer\Desktop\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\ResGen.write.1.tlog
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe.config
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.exe
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.pdb
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.exe
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\bin\Debug\The Famous Perspective Cube.pdb
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.csprojResolveAssemblyReference.cache
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Form1.resources
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The_Famous_Perspective_Cube.Properties.Resources.resources
+C:\Users\dan\Downloads\The Famous Perspective Cube2\The Famous Perspective Cube\The Famous Perspective Cube\obj\Debug\The Famous Perspective Cube.csproj.GenerateResource.Cache
