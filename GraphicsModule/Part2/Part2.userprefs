@@ -1,0 +1,25 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="graphicP2_test/MainActivity.cs">
+    <Files>
+      <File FileName="graphicP2_test/GLView1.cs" Line="139" Column="44" />
+      <File FileName="graphicP2_test/MainActivity.cs" Line="61" Column="44" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>e1.Action</Value>
+          <Value>e2.Action</Value>
+          <Value>e.HistoricalX(0)</Value>
+          <Value>distance</Value>
+          <Value>d</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Part2 MonoForAntroid.PreferredDevice="4.65in 720p (Galaxy Nexus)" />
+</Properties>

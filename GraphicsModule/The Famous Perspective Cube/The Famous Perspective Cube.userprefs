@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="The Famous Perspective Cube/CustomMatrix.cs">
+    <Files>
+      <File FileName="The Famous Perspective Cube/Dmatrix.cs" Line="18" Column="107" />
+      <File FileName="The Famous Perspective Cube/CustomMatrix.cs" Line="8" Column="11" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>e1.Action</Value>
+          <Value>e2.Action</Value>
+          <Value>e.HistoricalX(0)</Value>
+          <Value>distance</Value>
+          <Value>d</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

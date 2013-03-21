@@ -1,0 +1,13 @@
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/bin/Debug/graphicP2_test.dll.mdb
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/bin/Debug/graphicP2_test.dll
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/bin/Debug/graphicP2_test.graphicP2_test.apk
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/android/bin/graphicP2_test.graphicP2_test.apk
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/res/layout/main.xml
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/res/values/strings.xml
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/res/drawable/icon.png
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/res/layout/menu.xml
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/R.cs.flag
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/bin/Debug/graphicP2_test.graphicP2_test-Signed.apk
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/uploadflags.txt
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/graphicP2_test.dll
+/Users/DanPalmer/Projects/graphicP2_test/graphicP2_test/obj/Debug/graphicP2_test.dll.mdb

@@ -51,7 +51,6 @@ namespace The_Famous_Perspective_Cube
             double cos = Math.Cos(raidians);
             double sin = Math.Sin(raidians);
             return new double[4, 4] { { cos, sin, 0, 0 }, { -sin, cos, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 } };
-            
         }
 
         public static double[,] multiply(double[,] MatrixA, double[,] MatrixB)

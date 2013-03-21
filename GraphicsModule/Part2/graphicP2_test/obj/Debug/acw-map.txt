@@ -1,0 +1,2 @@
+graphicP2_test.Activity1;graphicp2_test.Activity1
+graphicP2_test.GLView1;graphicp2_test.GLView1

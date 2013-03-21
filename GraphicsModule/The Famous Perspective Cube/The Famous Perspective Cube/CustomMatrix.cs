@@ -245,11 +245,10 @@ namespace The_Famous_Perspective_Cube
             }
         }
 
-        public void removeHiddenPoints()
+        public IEnumerable<Triangle> removeHiddenPoints()
         {
-            //Points.OrderBy(p => p.Z);
-
-           Triangles.OrderBy(t => Points[t.FirstPoint].Z);
+           
+           return Triangles.OrderBy(t => Points[t.FirstPoint].Z);
             // join the points and triangles list together and then sort on the new list
             //return triangles in z order
            
