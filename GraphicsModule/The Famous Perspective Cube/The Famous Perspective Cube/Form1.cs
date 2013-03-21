@@ -65,6 +65,15 @@ namespace The_Famous_Perspective_Cube
             drawCube();
             updateLabels();
         }
+		private CustomMatrix NewCustomMatrix()
+		{
+			return new CustomMatrix()
+			{
+				fillColor=Color.FromArgb(Convert.ToInt32(textBoxR.Text), Convert.ToInt32(textBoxG.Text), Convert.ToInt32(textBoxB.Text))
+					,lineColor=Color.Black
+						,penThickness =1
+			};
+		}
 
         #region user inputs
 
@@ -119,12 +128,7 @@ namespace The_Famous_Perspective_Cube
 
         private void LoadCube(object sender, EventArgs e)
         {
-            DisplayObject = new CustomMatrix()
-            {
-                fillColor=Color.FromArgb(Convert.ToInt32(textBoxR.Text), Convert.ToInt32(textBoxG.Text), Convert.ToInt32(textBoxB.Text))
-                ,lineColor=Color.Black
-                ,penThickness =1
-            };
+			DisplayObject = NewCustomMatrix();
             DisplayObject.LoadMatrix(@"objects\Cube.txt");
             scalingMatrix= Dmatrix.ScalingMatrix(1,1,1);
             transformAndDrawAll();
@@ -132,12 +136,7 @@ namespace The_Famous_Perspective_Cube
 
         private void LoadTigger(object sender, EventArgs e)
         {
-            DisplayObject = new CustomMatrix()
-            {
-                fillColor = Color.FromArgb(Convert.ToInt32(textBoxR.Text), Convert.ToInt32(textBoxG.Text), Convert.ToInt32(textBoxB.Text)),
-                lineColor = Color.Black,
-                penThickness = 1
-            };
+			DisplayObject = NewCustomMatrix();
             DisplayObject.LoadMatrix(@"objects\tigger.txt");
             scalingMatrix = Dmatrix.ScalingMatrix(1, 1, 1);
             transformAndDrawAll();
@@ -145,12 +144,7 @@ namespace The_Famous_Perspective_Cube
 
         private void LoadDolphin(object sender, EventArgs e)
         {
-            DisplayObject = new CustomMatrix()
-            {
-                fillColor =  Color.FromArgb(Convert.ToInt32(textBoxR.Text), Convert.ToInt32(textBoxG.Text), Convert.ToInt32(textBoxB.Text)),
-                lineColor = Color.Black,
-                penThickness = 1
-            };
+			DisplayObject =NewCustomMatrix();
             DisplayObject.LoadMatrix(@"objects\Dolphin.txt");
             scalingMatrix = Dmatrix.ScalingMatrix(1, 1, 1);
             transformAndDrawAll();
@@ -158,24 +152,14 @@ namespace The_Famous_Perspective_Cube
 
         private void LoadTRex(object sender, EventArgs e)
         {
-            DisplayObject = new CustomMatrix()
-            {
-                fillColor = Color.FromArgb(Convert.ToInt32(textBoxR.Text), Convert.ToInt32(textBoxG.Text), Convert.ToInt32(textBoxB.Text)),
-                lineColor = Color.Black,
-                penThickness = 1
-            };
+			DisplayObject = NewCustomMatrix();
             DisplayObject.LoadMatrix(@"objects\T-Rex.txt");
             scalingMatrix = Dmatrix.ScalingMatrix(10, 10, 10);
         }
 
         private void LoadTeapot(object sender, EventArgs e)
         {
-            DisplayObject = new CustomMatrix()
-            {
-                fillColor = Color.FromArgb(Convert.ToInt32(textBoxR.Text), Convert.ToInt32(textBoxG.Text), Convert.ToInt32(textBoxB.Text)),
-                lineColor = Color.Black,
-                penThickness = 1
-            };
+			DisplayObject = NewCustomMatrix();
             DisplayObject.LoadMatrix(@"objects\teapot.txt");
             scalingMatrix = Dmatrix.ScalingMatrix(10, 10, 10);
             transformAndDrawAll();
