@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace The_Famous_Perspective_Cube
 {
+	/// <summary>
+	/// Point.
+	/// </summary>
     [Serializable()]
     public class point : ISerializable
     {
@@ -20,6 +23,9 @@ namespace The_Famous_Perspective_Cube
         public float Z { get; set; }
         public float W { get; set; }
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="point"/> class.
+		/// </summary>
         public point()
         {
             this.X = new float();
@@ -28,6 +34,11 @@ namespace The_Famous_Perspective_Cube
             this.W = new float();
         }
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="point"/> class.
+		/// </summary>
+		/// <param name="info">Info.</param>
+		/// <param name="ctxt">Ctxt.</param>
         public point(SerializationInfo info, StreamingContext ctxt)
         {
             this.X = (float)info.GetValue("X", typeof(float));
@@ -37,6 +48,12 @@ namespace The_Famous_Perspective_Cube
 
         }
 
+		/// <Docs>To be added: an object of type 'SerializationInfo'</Docs>
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="info">Info.</param>
+		/// <param name="ctxt">Ctxt.</param>
         public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
         {
             info.AddValue("X", this.X);
@@ -46,7 +63,9 @@ namespace The_Famous_Perspective_Cube
         }
     }
 
-
+	/// <summary>
+	/// Triangle.
+	/// </summary>
     public struct Triangle
     {
         public int Number;
@@ -55,6 +74,9 @@ namespace The_Famous_Perspective_Cube
         public int ThirdPoint;
     }
 
+	/// <summary>
+	/// Custom matrix.
+	/// </summary>
     public class CustomMatrix
     {
         private List<point> Points { get; set; }
@@ -64,6 +86,9 @@ namespace The_Famous_Perspective_Cube
         public int penThickness { get; set; }
         public Color fillColor { get; set; }
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="The_Famous_Perspective_Cube.CustomMatrix"/> class.
+		/// </summary>
         public CustomMatrix()
         {
             Points = new List<point>();
@@ -73,6 +98,11 @@ namespace The_Famous_Perspective_Cube
             penThickness = new int();
         }
 
+		/// <summary>
+		/// Loads object
+		/// </summary>
+		/// <returns><c>true</c>, if matrix was loaded, <c>false</c> otherwise.</returns>
+		/// <param name="fileName">File name.</param>
         public bool LoadMatrix(string fileName)
         {
             verginPoints = new List<point>();
@@ -121,6 +151,10 @@ namespace The_Famous_Perspective_Cube
             return true;
         }
 
+		/// <summary>
+		/// Transform the instance to a specified matrix.
+		/// </summary>
+		/// <param name="matrix">Matrix.</param>
         public void Transform(double[,] matrix)
         {
             if (matrix.GetLength(1) == 4)
@@ -177,6 +211,10 @@ namespace The_Famous_Perspective_Cube
             Rescale();
         }
 
+		/// <summary>
+		/// Rotate the specified matrix.
+		/// </summary>
+		/// <param name="matrix">Matrix.</param>
         public void Rotate(double[,] matrix)
         {
             for (int i = 0; i < Points.Count; i++)
@@ -197,6 +235,9 @@ namespace The_Famous_Perspective_Cube
             Rescale();
         }
 
+		/// <summary>
+		/// Rescale this instance.
+		/// </summary>
         public void Rescale()
         {
             Parallel.For(0, Points.Count, i =>
@@ -210,8 +251,13 @@ namespace The_Famous_Perspective_Cube
              });
         }
 
+		/// <summary>
+		/// Draw the specified g. As a wireframe
+		/// </summary>
+		/// <param name="g">The green component.</param>
         public void draw(Graphics g)
         {
+			removeHiddenPoints();
             Pen pen = new Pen(new SolidBrush(lineColor), penThickness);
             foreach (Triangle Tri in Triangles)
             {
@@ -225,10 +271,14 @@ namespace The_Famous_Perspective_Cube
             }
         }
 
+		/// <summary>
+		/// Draws as filled polygon 
+		/// </summary>
+		/// <param name="g">The green component.</param>
         public void drawAsFilled(Graphics g)
         {
+			removeHiddenPoints();
             SolidBrush brush = new SolidBrush(fillColor);
-
             foreach (Triangle Tri in Triangles)
             {
                 //Construct an array of .net points to draw.
@@ -245,12 +295,10 @@ namespace The_Famous_Perspective_Cube
             }
         }
 
-        public IEnumerable<Triangle> removeHiddenPoints()
+        public void removeHiddenPoints()
         {
-           
-           return Triangles.OrderBy(t => Points[t.FirstPoint].Z);
-            // join the points and triangles list together and then sort on the new list
-            //return triangles in z order
+           //order the triangles in order of the depth
+			Triangles.OrderBy(t => Points[t.FirstPoint].Z).ThenBy(t => Points[t.SecondPoint].Z).ThenBy(t => Points[t.ThirdPoint].Z);
            
         }
 
@@ -272,7 +320,6 @@ namespace The_Famous_Perspective_Cube
                 var formatter = new BinaryFormatter();
                 formatter.Serialize(ms, verginPoints);
                 ms.Position = 0;
-
                 Points = (List<point>)formatter.Deserialize(ms);
             }
         }
