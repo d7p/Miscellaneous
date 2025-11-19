@@ -1,0 +1,46 @@
+# TTD-DR Configuration
+# Based on arXiv:2507.16075 - Deep Researcher with Test-Time Diffusion
+
+# LLM Configuration
+llm:
+  provider: "openai"  # or "anthropic"
+  model: "gpt-4"  # or "claude-3-5-sonnet-20241022"
+  api_key_env: "OPENAI_API_KEY"  # or "ANTHROPIC_API_KEY"
+  temperature: 0.7
+  max_tokens: 4096
+
+# Search Configuration
+search:
+  provider: "duckduckgo"  # Simple search provider
+  max_results: 5
+
+# Algorithm Configuration
+algorithm:
+  # Maximum number of denoising/revision steps (Algorithm 1, Line 1)
+  max_revision_steps: 20
+
+  # Self-Evolution parameters (Table 4 from paper)
+  self_evolution:
+    # Number of initial states for each component
+    n_plan: 1          # Initial plan states
+    n_query: 5         # Initial search query states
+    n_answer: 3        # Initial answer states
+    n_report: 1        # Initial report states
+
+    # Number of self-evolving steps for each component
+    s_plan: 1          # Plan evolution steps
+    s_query: 0         # Query evolution steps (no evolution in baseline)
+    s_answer: 0        # Answer evolution steps (no evolution in baseline)
+    s_report: 1        # Report evolution steps
+
+# Output Configuration
+output:
+  directory: "output"
+  save_intermediate: true  # Save intermediate drafts
+  save_search_history: true  # Save search questions and answers
+  format: "markdown"  # or "txt", "json"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "ttd-dr.log"
