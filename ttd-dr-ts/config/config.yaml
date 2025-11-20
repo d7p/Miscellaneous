@@ -10,8 +10,10 @@ llm:
   maxTokens: 4096
 
 # Search Configuration
+# Recommended: "playwright" (free, reliable) or "serpapi" (paid, best quality)
+# Note: "duckduckgo" is unreliable and only for basic testing
 search:
-  provider: "serpapi"  # "serpapi", "duckduckgo", or "playwright"
+  provider: "playwright"  # "playwright", "serpapi", or "duckduckgo"
   maxResults: 5
   serpapi:
     apiKeyEnv: "SERPAPI_API_KEY"

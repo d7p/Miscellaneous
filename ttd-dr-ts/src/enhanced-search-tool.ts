@@ -252,15 +252,38 @@ export class PlaywrightProvider extends SearchProvider {
 }
 
 /**
- * DuckDuckGo search provider (original implementation)
+ * DuckDuckGo search provider
+ *
+ * Note: DuckDuckGo API is unreliable and often returns HTML instead of JSON.
+ * This provider includes fallback to mock results for development/testing.
+ * For production, use SerpAPI or Playwright providers instead.
  */
 export class DuckDuckGoProvider extends SearchProvider {
   async search(query: string): Promise<SearchResult[]> {
     try {
-      const url = `https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json`;
-      const response = await fetch(url);
-      const data = await response.json() as any;
+      const url = `https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&no_html=1&skip_disambig=1`;
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        },
+      });
 
+      // Check content type before parsing
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        console.warn(`DuckDuckGo returned non-JSON response (${contentType}). Using fallback results.`);
+        return this.getFallbackResults(query);
+      }
+
+      const text = await response.text();
+
+      // Validate it's actually JSON before parsing
+      if (!text.trim().startsWith('{')) {
+        console.warn('DuckDuckGo returned HTML instead of JSON. Using fallback results.');
+        return this.getFallbackResults(query);
+      }
+
+      const data = JSON.parse(text) as any;
       const results: SearchResult[] = [];
 
       if (data.RelatedTopics && Array.isArray(data.RelatedTopics)) {
@@ -284,22 +307,37 @@ export class DuckDuckGoProvider extends SearchProvider {
       }
 
       if (results.length === 0) {
-        results.push({
-          title: `Search results for: ${query}`,
-          snippet: `Information about ${query}. This is a simulated search result.`,
-          url: 'https://example.com',
-        });
+        return this.getFallbackResults(query);
       }
 
       return results;
     } catch (error) {
-      console.error(`DuckDuckGo search error: ${error}`);
-      return [{
-        title: `Search: ${query}`,
-        snippet: `[Search functionality would provide real-time information about ${query}]`,
-        url: 'https://example.com',
-      }];
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.warn(`DuckDuckGo API error: ${errorMessage}`);
+      console.warn('Tip: For production use, switch to "serpapi" or "playwright" provider in config.yaml');
+      return this.getFallbackResults(query);
     }
+  }
+
+  private getFallbackResults(query: string): SearchResult[] {
+    // Generate mock results for development/testing
+    return [
+      {
+        title: `Search results for: ${query}`,
+        snippet: `⚠️ DuckDuckGo API is currently unavailable. This is a simulated result.\n\n` +
+                `For production research, please:\n` +
+                `1. Use SerpAPI provider (high-quality Google/Bing results)\n` +
+                `2. Use Playwright provider (full page content extraction)\n\n` +
+                `Change "provider" in config/config.yaml to "serpapi" or "playwright".\n\n` +
+                `DuckDuckGo provider is recommended for development/testing only.`,
+        url: 'https://example.com',
+      },
+      {
+        title: `About ${query}`,
+        snippet: `[In a real search, this would contain information about ${query}]`,
+        url: 'https://example.com',
+      },
+    ];
   }
 }
 
