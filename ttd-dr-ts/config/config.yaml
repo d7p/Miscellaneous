@@ -11,8 +11,17 @@ llm:
 
 # Search Configuration
 search:
-  provider: "duckduckgo"
+  provider: "serpapi"  # "serpapi", "duckduckgo", or "playwright"
   maxResults: 5
+  serpapi:
+    apiKeyEnv: "SERPAPI_API_KEY"
+    engine: "google"  # google, bing, etc.
+  playwright:
+    browser: "chromium"  # chromium, firefox, webkit
+    headless: true
+    timeout: 30000  # milliseconds
+    extractContent: true  # Extract and convert HTML to markdown
+    maxContentLength: 10000  # Max chars per page
 
 # Algorithm Configuration
 algorithm:

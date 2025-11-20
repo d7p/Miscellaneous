@@ -6,6 +6,13 @@
 export { TTDDRAgent } from './ttd-dr-agent';
 export { LLMClient, OpenAIClient, AnthropicClient, createLLMClient } from './llm-client';
 export { SearchTool } from './search-tool';
+export {
+  EnhancedSearchTool,
+  SearchProvider,
+  SerpAPIProvider,
+  PlaywrightProvider,
+  DuckDuckGoProvider
+} from './enhanced-search-tool';
 export { Prompts } from './prompts';
 export { Logger, loadConfig, saveOutput, saveResearchSession, setupLogging, configToAgentConfig } from './utils';
 export * from './types';

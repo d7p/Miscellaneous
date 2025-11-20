@@ -11,9 +11,24 @@ export interface LLMConfig {
   maxTokens: number;
 }
 
+export interface SerpAPIConfig {
+  apiKeyEnv: string;
+  engine: string;
+}
+
+export interface PlaywrightConfig {
+  browser: 'chromium' | 'firefox' | 'webkit';
+  headless: boolean;
+  timeout: number;
+  extractContent: boolean;
+  maxContentLength: number;
+}
+
 export interface SearchConfig {
-  provider: string;
+  provider: 'serpapi' | 'duckduckgo' | 'playwright';
   maxResults: number;
+  serpapi?: SerpAPIConfig;
+  playwright?: PlaywrightConfig;
 }
 
 export interface SelfEvolutionConfig {

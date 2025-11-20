@@ -4,7 +4,7 @@
  */
 
 import { LLMClient } from './llm-client';
-import { SearchTool } from './search-tool';
+import { ISearchTool } from './search-interface';
 import { Prompts } from './prompts';
 import { AgentConfig, AgentState } from './types';
 import { Logger } from './utils';
@@ -15,13 +15,13 @@ import { Logger } from './utils';
  */
 export class TTDDRAgent {
   private llm: LLMClient;
-  private search: SearchTool;
+  private search: ISearchTool;
   private config: AgentConfig;
   private logger: Logger;
 
   constructor(
     llmClient: LLMClient,
-    searchTool: SearchTool,
+    searchTool: ISearchTool,
     config: AgentConfig,
     logger: Logger
   ) {

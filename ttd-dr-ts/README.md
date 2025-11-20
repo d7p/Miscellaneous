@@ -16,6 +16,8 @@ TTD-DR is a novel AI research agent that conceptualizes research report generati
 - 🔄 **Denoising with Retrieval**: Iteratively refines draft reports using external information
 - 🧬 **Component-wise Self-Evolution**: Optimizes each component through critique and revision
 - 🔍 **RAG-based Answer Synthesis**: Synthesizes precise answers from retrieved documents
+- 🌐 **Multiple Search Providers**: SerpAPI (Google/Bing), Playwright (full page extraction), or DuckDuckGo
+- 🤖 **Web Browsing**: Playwright integration for extracting full content from web pages
 - 📊 **Comprehensive Output**: Saves final reports, intermediate drafts, search history, and metadata
 - 💪 **Full TypeScript**: Strong typing, modern async/await, and ES2020+ features
 
@@ -137,7 +139,64 @@ algorithm:
     nAnswer: 3          # Number of answer variants
     sPlan: 1            # Plan evolution steps
     sReport: 1          # Report evolution steps
+
+search:
+  provider: "serpapi"  # "serpapi", "playwright", or "duckduckgo"
+  maxResults: 5
+  serpapi:
+    apiKeyEnv: "SERPAPI_API_KEY"
+    engine: "google"
+  playwright:
+    browser: "chromium"
+    headless: true
+    timeout: 30000
+    extractContent: true
+    maxContentLength: 10000
 ```
+
+## Search Providers
+
+TTD-DR supports three search providers with different capabilities:
+
+### 1. SerpAPI (Recommended for Production)
+- ✅ High-quality Google/Bing search results
+- ✅ Reliable and fast
+- ⚠️ Requires paid API key from [serpapi.com](https://serpapi.com)
+
+```yaml
+search:
+  provider: "serpapi"
+  serpapi:
+    apiKeyEnv: "SERPAPI_API_KEY"
+    engine: "google"
+```
+
+### 2. Playwright (Best for Deep Content)
+- ✅ Full page content extraction
+- ✅ HTML to Markdown conversion
+- ✅ JavaScript rendering
+- ⚠️ Slower, higher resource usage
+- First run: `npx playwright install chromium`
+
+```yaml
+search:
+  provider: "playwright"
+  playwright:
+    browser: "chromium"
+    extractContent: true
+```
+
+### 3. DuckDuckGo (Default, Free)
+- ✅ No API key needed
+- ✅ Quick setup
+- ⚠️ Limited results
+
+```yaml
+search:
+  provider: "duckduckgo"
+```
+
+**📖 See [SEARCH_PROVIDERS.md](SEARCH_PROVIDERS.md) for detailed guide**
 
 ## Scripts
 

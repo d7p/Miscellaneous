@@ -13,7 +13,7 @@ import * as dotenv from 'dotenv';
 import * as readline from 'readline';
 import { TTDDRAgent } from './ttd-dr-agent';
 import { createLLMClient } from './llm-client';
-import { SearchTool } from './search-tool';
+import { EnhancedSearchTool } from './enhanced-search-tool';
 import { loadConfig, saveResearchSession, setupLogging, configToAgentConfig } from './utils';
 import { LogLevel } from './types';
 
@@ -75,8 +75,9 @@ async function runResearch(query: string, configPath: string = 'config/config.ya
       apiKey
     );
 
-    // Create search tool
-    const searchTool = new SearchTool(config.search.maxResults);
+    // Create enhanced search tool
+    printInfo(`Initializing ${config.search.provider} search provider`);
+    const searchTool = new EnhancedSearchTool(config.search);
 
     // Create agent configuration
     const agentConfig = configToAgentConfig(config);
